@@ -3,7 +3,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
-  overflow: hidden;
+  position: relative;
 }
 
 *,
@@ -17,28 +17,20 @@ html {
 }
 
 body {
-  width: 100%;
-  height: 100vh;
   background-color: $white;
   background-repeat: no-repeat, no-repeat;
   font-family: $spartan;
 }
 
-.container {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
 // Top image
 .pattern-top-mobile {
   position: absolute;
-  top: -5%;
+  top: 0;
 }
 
 //Title
 .title {
-  margin: 80px 55px 30px 55px;
+  padding: 80px 50px 30px 50px;
   font-size: $text-size;
   text-align: center;
   color: $very-dark-magenta;
@@ -48,7 +40,7 @@ body {
 
 //about
 .about {
-  margin: 0px 23px 40px 23px;
+  padding: 0px 23px 40px 23px;
   font-size: 0.875em;
   text-align: center;
   color: #502050;
@@ -59,6 +51,11 @@ body {
 .ratings {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 450px) {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .ratings-card {
@@ -68,9 +65,80 @@ body {
   font-weight: $heavy-weight;
   color: $very-dark-magenta;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 8px;
   line-height: 1.5;
 }
 .star {
-  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+//Testimonals
+.testimonials {
+  padding-top: 50px;
+
+  &-card {
+    background-color: $very-dark-magenta;
+    margin: 0 25px;
+    margin-bottom: 15px;
+    padding: 36px 30px;
+    border-radius: 8px;
+  }
+}
+
+.testimonials-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  text-align: left;
+
+  & img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    vertical-align: center;
+    margin-right: 20px;
+  }
+}
+
+.testimonials-name {
+  color: $white;
+  font-weight: $medium-weight;
+}
+
+.testimonials-legend {
+  color: $soft-pink;
+  line-height: 1.3;
+}
+
+.testimonials-text {
+  color: $white;
+  line-height: 1.5;
+}
+
+
+
+
+
+//attribution
+.attribution {
+  text-align: center;
+  margin-top: 50px;
+
+  & a {
+    color: $very-dark-magenta;
+    text-decoration: none;
+  }
+
+  & a:hover {
+    color: $soft-pink;
+  }
+}
+
+//bottom image
+.pattern-btm-mobile {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
