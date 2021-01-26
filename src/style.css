@@ -18,8 +18,6 @@ html {
 }
 
 body {
-  width: 100%;
-  height: 100vh;
   background-color: white;
   background-repeat: no-repeat, no-repeat;
   font-family: "Spartan", sans-serif;
@@ -56,18 +54,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-@media (min-width: 450px) {
-  .ratings {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
 }
 
 .ratings-card {
@@ -135,8 +121,9 @@ body {
 }
 
 .attribution {
+  font-size: 14px;
   text-align: center;
-  margin-top: 50px;
+  margin: 50px 0;
 }
 
 .attribution a {
@@ -152,5 +139,100 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+@media (min-width: 440px) {
+  .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 100px 165px 70px 165px;
+  }
+  .top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .title,
+  .about {
+    text-align: left;
+    padding-left: 0;
+    margin-left: 0;
+    padding-top: 0;
+  }
+  .title {
+    width: 70%;
+    font-size: 20px;
+  }
+  .about {
+    width: 85%;
+    line-height: 1.5;
+  }
+  .ratings {
+    margin: 0;
+    padding: 0;
+    width: 1250px;
+  }
+  .ratings-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 440px;
+    height: 55px;
+    font-size: 15px;
+  }
+  .ratings-card:first-of-type {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .ratings-card:nth-of-type(2) {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .ratings-card:last-of-type {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .ratings-card .star {
+    margin: 0 30px;
+  }
+  .testimonials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 165px;
+    height: 250px;
+  }
+  .testimonials-card {
+    width: 350px;
+  }
+  .testimonials-card:first-of-type {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .testimonials-card:nth-of-type(2) {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .testimonials-card:last-of-type {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .attribution {
+    margin-top: 80px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

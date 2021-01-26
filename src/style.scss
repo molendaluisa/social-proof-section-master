@@ -51,11 +51,6 @@ body {
 .ratings {
   display: flex;
   flex-direction: column;
-
-  @media (min-width: 450px) {
-    display: flex;
-    flex-direction: row;
-  }
 }
 
 .ratings-card {
@@ -117,14 +112,11 @@ body {
   line-height: 1.5;
 }
 
-
-
-
-
 //attribution
 .attribution {
+  font-size: 14px;
   text-align: center;
-  margin-top: 50px;
+  margin: 50px 0;
 
   & a {
     color: $very-dark-magenta;
@@ -141,4 +133,88 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+//Media Query
+
+@media (min-width: 440px) {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 100px 165px 70px 165px;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .title,
+  .about {
+    text-align: left;
+    padding-left: 0;
+    margin-left: 0;
+    padding-top: 0;
+  }
+
+  .title {
+    width: 70%;
+    font-size: 20px;
+  }
+
+  .about {
+    width: 85%;
+    line-height: 1.5;
+  }
+
+  .ratings {
+    margin: 0;
+    padding: 0;
+    width: 1250px;
+
+    &-card {
+      display: flex;
+      width: 440px;
+      height: 55px;
+      font-size: 15px;
+
+      &:first-of-type {
+        align-self: flex-start;
+      }
+      &:nth-of-type(2) {
+        align-self: center;
+      }
+      &:last-of-type {
+        align-self: flex-end;
+      }
+      .star {
+        margin: 0 30px;
+      }
+    }
+  }
+
+  .testimonials {
+    display: flex;
+    margin: 0 165px;
+    height: 250px;
+
+    &-card {
+      width: 350px;
+
+      &:first-of-type {
+        align-self: flex-end;
+      }
+      &:nth-of-type(2) {
+        align-self: center;
+      }
+      &:last-of-type {
+        align-self: flex-start;
+      }
+    }
+  }
+  .attribution {
+    margin-top: 80px;
+  }
 }
