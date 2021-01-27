@@ -73,13 +73,14 @@ body {
   border-radius: 8px;
   line-height: 1.5;
 }
+
 .star {
   padding-bottom: 15px;
 }
 
 //Testimonals
 .testimonials {
-  padding-top: 50px;
+  //padding-top: 50px;
 
   &-card {
     background-color: $very-dark-magenta;
@@ -158,8 +159,8 @@ body {
 
   .bottom-background {
     background-image: url("../images/bg-pattern-bottom-desktop.svg");
-    right: -70px;
-    bottom: 24px;
+    right: -160px;
+    bottom: 0;
     background-size: cover;
   }
 
@@ -167,7 +168,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 100px 165px 70px 165px;
+    padding: 100px 165px 30px 165px;
   }
 
   .top {
@@ -198,9 +199,11 @@ body {
     margin: 0;
     padding: 0;
     width: 1250px;
+    align-self: start;
 
     &-card {
       display: flex;
+      margin: 18px 0;
       width: 440px;
       height: 55px;
       font-size: 15px;
@@ -223,23 +226,29 @@ body {
   .testimonials {
     display: flex;
     margin: 0 165px;
-    height: 250px;
+    height: 300px;
+    font-size: 12px;
 
     &-card {
-      width: 350px;
-
+      margin: 0;
+      flex: 1 1 auto;
+      
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
       &:first-of-type {
-        align-self: flex-end;
+        align-self: flex-start;
       }
       &:nth-of-type(2) {
         align-self: center;
       }
       &:last-of-type {
-        align-self: flex-start;
+        align-self: flex-end;
       }
     }
   }
+
   .attribution {
-    margin-top: 80px;
+    margin-top: 50px;
   }
 }

@@ -81,10 +81,6 @@ body {
   padding-bottom: 15px;
 }
 
-.testimonials {
-  padding-top: 50px;
-}
-
 .testimonials-card {
   background-color: #502050;
   margin: 0 25px;
@@ -161,8 +157,8 @@ body {
   }
   .bottom-background {
     background-image: url("../images/bg-pattern-bottom-desktop.svg");
-    right: -70px;
-    bottom: 24px;
+    right: -160px;
+    bottom: 0;
     background-size: cover;
   }
   .wrapper {
@@ -175,7 +171,7 @@ body {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    padding: 100px 165px 70px 165px;
+    padding: 100px 165px 30px 165px;
   }
   .top {
     display: -webkit-box;
@@ -206,11 +202,15 @@ body {
     margin: 0;
     padding: 0;
     width: 1250px;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
   }
   .ratings-card {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin: 18px 0;
     width: 440px;
     height: 55px;
     font-size: 15px;
@@ -236,14 +236,21 @@ body {
     display: -ms-flexbox;
     display: flex;
     margin: 0 165px;
-    height: 250px;
+    height: 300px;
+    font-size: 12px;
   }
   .testimonials-card {
-    width: 350px;
+    margin: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+  .testimonials-card:not(:last-child) {
+    margin-right: 20px;
   }
   .testimonials-card:first-of-type {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
   .testimonials-card:nth-of-type(2) {
     -ms-flex-item-align: center;
@@ -251,11 +258,11 @@ body {
         align-self: center;
   }
   .testimonials-card:last-of-type {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
   .attribution {
-    margin-top: 80px;
+    margin-top: 50px;
   }
 }
 /*# sourceMappingURL=style.css.map */
