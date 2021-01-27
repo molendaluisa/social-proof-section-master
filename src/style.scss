@@ -22,10 +22,20 @@ body {
   font-family: $spartan;
 }
 
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
 // Top image
-.pattern-top-mobile {
+.top-background {
+  height: 100vh;
+  width: 100vw;
   position: absolute;
   top: 0;
+  left: 0;
+  background-image: url("../images/bg-pattern-top-mobile.svg");
+  background-repeat: no-repeat;
 }
 
 //Title
@@ -129,15 +139,30 @@ body {
 }
 
 //bottom image
-.pattern-btm-mobile {
+.bottom-background {
+  height: 100vh;
+  width: 100vw;
   position: absolute;
   bottom: 0;
   right: 0;
+  background-image: url("../images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat;
 }
 
 //Media Query
 
 @media (min-width: 440px) {
+  .top-background {
+    background-image: url("../images/bg-pattern-top-desktop.svg");
+  }
+
+  .bottom-background {
+    background-image: url("../images/bg-pattern-bottom-desktop.svg");
+    right: -70px;
+    bottom: 24px;
+    background-size: cover;
+  }
+
   .wrapper {
     display: flex;
     align-items: center;
